@@ -40,15 +40,18 @@
              </div>
                     
              <hr class="mt-5 mb-5">
-             <h3 class="text-center text-monospace">Minhas Postagens</h3>
+             <h3 class="text-center text-monospace mb-5">Minhas Postagens</h3>
 
-             <div class="card" *ngFor="let postagem of listaPostagens">
+             <div class="card mb-4" *ngFor="let postagem of listaPostagens">
                  <div class="card-header">
-                     {{postagem.titulo}}
+                    <h5 class="card-title"> {{postagem.titulo}}</h5> 
                  </div>
                  <div class="card-body">
-                     {{postagem.texto}}
-                     {{postagem.data}}
+                     <p class="card-text"> {{postagem.texto}}</p>
+                     <small class="form-text m-0 mb-3 text-muted  text-monospace"> 
+                          Postado em {{postagem.data | date: 'dd/MM/yyyy'}} 
+                          às {{postagem.data | date: 'HH:mm'}}
+                        </small>
                  </div>
              </div>
         </div>

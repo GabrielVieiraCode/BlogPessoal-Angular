@@ -9,6 +9,6 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   getAllPostagens(){
-    return this.http.get('http://3122057.14:8080/postagens')
+    return this.http.get('http://31.220.57.14:8080/postagens')
   }
 }
